@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Audiobook reviews (Audiobook+reviews)' inline='true' name='federated.0h8gjt309l4nc41cse12u0s0a929' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Audiobook+reviews' name='excel-direct.0hhw4dv1hosez81gftdjs17379e5'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/GitHub/Business-Analysis/Part 4 - Introduction to Tableau/Audiobook+reviews.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0hhw4dv1hosez81gftdjs17379e5' name='Audiobook reviews' table='[&apos;Audiobook reviews$&apos;]' type='table'>
+          <columns gridOrigin='A1:D10799:no:A1:D10799:0' header='yes' outcome='6'>
+            <column datatype='string' name='Audiobook name' ordinal='0' />
+            <column datatype='date' name='Review Date' ordinal='1' />
+            <column datatype='integer' name='Rating' ordinal='2' />
+            <column datatype='integer' name='Transaction ID' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Audiobook reviews]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D10799:no:A1:D10799:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Audiobook name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Audiobook name]</local-name>
+            <parent-name>[Audiobook reviews]</parent-name>
+            <remote-alias>Audiobook name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Review Date]</local-name>
+            <parent-name>[Audiobook reviews]</parent-name>
+            <remote-alias>Review Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rating]</local-name>
+            <parent-name>[Audiobook reviews]</parent-name>
+            <remote-alias>Rating</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Transaction ID]</local-name>
+            <parent-name>[Audiobook reviews]</parent-name>
+            <remote-alias>Transaction ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Rating]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Transaction ID]' role='dimension' type='ordinal' />
+      <column caption='Audiobook reviews' datatype='table' name='[__tableau_internal_object_id__].[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]' role='measure' type='quantitative' />
+      <column-instance column='[Rating]' derivation='Avg' name='[avg:Rating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Rating]' derivation='Count' name='[cnt:Rating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Rating]' derivation='Sum' name='[sum:Rating:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/daivi/AppData/Local/Temp/TableauTemp/#TableauTemp_050t43a0r6y1a413onk6s1vgg6cr.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/21/2026 11:09:21 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Audiobook name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Audiobook name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Audiobook name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Audiobook reviews</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Review Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Review Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Review Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Audiobook reviews</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>492</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rating</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Audiobook reviews</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Transaction ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction ID</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Audiobook reviews</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10798</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0h8gjt309l4nc41cse12u0s0a929].[cnt:Rating:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0h8gjt309l4nc41cse12u0s0a929].[avg:Rating:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0h8gjt309l4nc41cse12u0s0a929].[sum:Rating:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Audiobook reviews' id='Audiobook reviews_6363DCA6803E45C5BFC58B79A96172B3'>
+            <properties context=''>
+              <relation connection='excel-direct.0hhw4dv1hosez81gftdjs17379e5' name='Audiobook reviews' table='[&apos;Audiobook reviews$&apos;]' type='table'>
+                <columns gridOrigin='A1:D10799:no:A1:D10799:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Audiobook name' ordinal='0' />
+                  <column datatype='date' name='Review Date' ordinal='1' />
+                  <column datatype='integer' name='Rating' ordinal='2' />
+                  <column datatype='integer' name='Transaction ID' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Audiobook sales (Audiobook+sales)' inline='true' name='federated.18bxs5b10ehge119u1bt10f657i4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Audiobook+sales' name='excel-direct.1r3xil90i5ap4q16n32io08ko570'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/GitHub/Business-Analysis/Part 4 - Introduction to Tableau/Audiobook+sales.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1r3xil90i5ap4q16n32io08ko570' name='Audiobook sales' table='[&apos;Audiobook sales$&apos;]' type='table'>
+          <columns gridOrigin='A1:C10001:no:A1:C10001:0' header='yes' outcome='6'>
+            <column datatype='integer' name='Date of Purchase' ordinal='0' />
+            <column datatype='string' name='Audiobook name' ordinal='1' />
+            <column datatype='integer' name='Transaction ID' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Audiobook sales]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C10001:no:A1:C10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date of Purchase</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Date of Purchase]</local-name>
+            <parent-name>[Audiobook sales]</parent-name>
+            <remote-alias>Date of Purchase</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Audiobook name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Audiobook name]</local-name>
+            <parent-name>[Audiobook sales]</parent-name>
+            <remote-alias>Audiobook name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Transaction ID]</local-name>
+            <parent-name>[Audiobook sales]</parent-name>
+            <remote-alias>Transaction ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='date' datatype-customized='true' name='[Date of Purchase]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Transaction ID]' role='dimension' type='ordinal' />
+      <column caption='Audiobook sales' datatype='table' name='[__tableau_internal_object_id__].[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/daivi/AppData/Local/Temp/TableauTemp/#TableauTemp_132g3a61gqex1h17jl9511xrnp4c.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/21/2026 11:08:34 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date of Purchase</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Date of Purchase]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date of Purchase</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Audiobook sales</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1576</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Audiobook name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Audiobook name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Audiobook name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Audiobook sales</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Transaction ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction ID</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Audiobook sales</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>110570</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Audiobook sales' id='Audiobook sales_4347B4ED611C41FDBF49B4A0EDECB781'>
+            <properties context=''>
+              <relation connection='excel-direct.1r3xil90i5ap4q16n32io08ko570' name='Audiobook sales' table='[&apos;Audiobook sales$&apos;]' type='table'>
+                <columns gridOrigin='A1:C10001:no:A1:C10001:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Date of Purchase' ordinal='0' />
+                  <column datatype='string' name='Audiobook name' ordinal='1' />
+                  <column datatype='integer' name='Transaction ID' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='federated.0h8gjt309l4nc41cse12u0s0a929'>
+      <column datatype='date' name='[Review Date]' role='dimension' type='ordinal' />
+      <column-instance column='[Review Date]' derivation='Month' name='[mn:Review Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Review Date]' derivation='Month-Trunc' name='[tmn:Review Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Review Date]' derivation='Year-Trunc' name='[tyr:Review Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Review Date]' derivation='Year' name='[yr:Review Date:ok]' pivot='key' type='ordinal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='federated.18bxs5b10ehge119u1bt10f657i4'>
+      <column datatype='date' datatype-customized='true' name='[Date of Purchase]' role='dimension' type='ordinal' />
+      <column-instance column='[Date of Purchase]' derivation='Month' name='[mn:Date of Purchase:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Date of Purchase]' derivation='Month-Trunc' name='[tmn:Date of Purchase:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Date of Purchase]' derivation='Year-Trunc' name='[tyr:Date of Purchase:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Date of Purchase]' derivation='Year' name='[yr:Date of Purchase:ok]' pivot='key' type='ordinal' />
+    </datasource-dependencies>
+    <datasource-relationship source='federated.18bxs5b10ehge119u1bt10f657i4' target='federated.0h8gjt309l4nc41cse12u0s0a929'>
+      <column-mapping>
+        <map key='[federated.18bxs5b10ehge119u1bt10f657i4].[mn:Date of Purchase:ok]' value='[federated.0h8gjt309l4nc41cse12u0s0a929].[mn:Review Date:ok]' />
+        <map key='[federated.18bxs5b10ehge119u1bt10f657i4].[tmn:Date of Purchase:ok]' value='[federated.0h8gjt309l4nc41cse12u0s0a929].[tmn:Review Date:ok]' />
+        <map key='[federated.18bxs5b10ehge119u1bt10f657i4].[tyr:Date of Purchase:ok]' value='[federated.0h8gjt309l4nc41cse12u0s0a929].[tyr:Review Date:ok]' />
+        <map key='[federated.18bxs5b10ehge119u1bt10f657i4].[yr:Date of Purchase:ok]' value='[federated.0h8gjt309l4nc41cse12u0s0a929].[yr:Review Date:ok]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Blending'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Audiobook sales (Audiobook+sales)' name='federated.18bxs5b10ehge119u1bt10f657i4' />
+            <datasource caption='Audiobook reviews (Audiobook+reviews)' name='federated.0h8gjt309l4nc41cse12u0s0a929' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0h8gjt309l4nc41cse12u0s0a929'>
+            <column datatype='integer' name='[Rating]' role='measure' type='quantitative' />
+            <column-instance column='[Rating]' derivation='Count' name='[cnt:Rating:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.18bxs5b10ehge119u1bt10f657i4'>
+            <column datatype='date' datatype-customized='true' name='[Date of Purchase]' role='dimension' type='ordinal' />
+            <column-instance column='[Date of Purchase]' derivation='Month-Trunc' name='[tmn:Date of Purchase:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0h8gjt309l4nc41cse12u0s0a929].[cnt:Rating:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.18bxs5b10ehge119u1bt10f657i4].[tmn:Date of Purchase:ok]</cols>
+      </table>
+      <simple-id uuid='{07FD229E-4746-451A-8264-9F783EFA14AF}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='75'>
+    <window class='worksheet' maximized='true' name='Blending'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.18bxs5b10ehge119u1bt10f657i4].[yr:Date of Purchase:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AFB9A364-9FA3-46C7-8C98-33D1E1049702}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='89' name='Blending' width='192'>
+      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
+      LCjDwQAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
