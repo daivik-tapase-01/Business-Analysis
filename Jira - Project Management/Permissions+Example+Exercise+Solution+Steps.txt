@@ -1,0 +1,17 @@
+SOLUTION STEPS:
+
+1) Create users - consultant, customer, project owner and developer
+
+2) Create groups - consultant, customer, Developer
+
+3) Create project roles based on the users and groups - Consultant, Developer, Customer, Project Owner
+
+4) Create a new permission scheme for the project, and assign the individual project permissions to the respective project roles that were just created
+
+5) Create the new project 
+
+6) Update the project to use the new permission scheme
+
+7) Assign the respective users and groups to each of the project roles for that project
+
+8) Log in as each user and make sure everythings conigured correctly.

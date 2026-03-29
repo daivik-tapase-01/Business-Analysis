@@ -1,0 +1,16 @@
+OBJECTIVES:
+
+1) Create a new project - ‘Permissions Example’ Project
+
+2) Create a ‘Consultant’ user
+-->This user should only have access to this project alone, and no other projects in your instance. 
+-->This user should also have the ability to work on issues in the 'Permissions Example' project
+
+3) Create a ‘Customer’ user 
+-->This user should only have access to this project alone, and no other projects in your instance.
+-->This user should have read-only access in the project
+
+4) Create a ‘Project Owner’ user 
+-->This user can administer the project and is the only one who can manage sprints.
+
+5) ‘Developer’ user can work on issues
